@@ -8,8 +8,8 @@ function convertTo24HrsFormat(time) {
    
    let convertedTime;
    if(clock === "AM" && times === 12){
-       times = 00;
-       convertedTime = times + time.slice(2,-2);
+     
+       convertedTime = "00" + time.slice(2,-2);
    }else if(clock === "AM" && times <= 12 || clock === "PM" && times == 12){
        convertedTime = time.slice(0, -2);
    }else if(clock === "PM" && times <= 12 ){
